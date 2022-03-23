@@ -28,28 +28,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: CI=false npm run build --if-present
-    - run: pwd
-    - run: ls
-    #- run: git config --global user.email hassanmahmoud607@gmai.com
-    #- run: git config --global user.name hassan510-cmd
-    #- run: git add build 
-    #- run: git commit -m "add new build"
-    #- run: git push 
-    #- run: git clone https://github.com/hassan510-cmd/build_static.git
-    #- run: cp -r ../build/ ./
-      #working-directory: ./build_static
-    #- run: ls
-      #working-directory: ./build_static
-    #- run: git config --global user.email hassanmahmoud607@gmai.com
-      #working-directory: ./build_static
-    #- run: git config --global user.name hassan510-cmd
-      #working-directory: ./build_static
-    #- run: git add *
-      #working-directory: ./build_static
-    #- run: git commit -m "add from dev repo"
-      #working-directory: ./build_static
-    #- run: git push
-     # working-directory: ./build_static
     - name: Pushes to another repository
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
@@ -60,5 +38,5 @@ jobs:
         destination_branch : 'master'
         user_email: 'hassanmahmoud607@gmail.com'
         user_name: 'hassan510-cmd'
-        commit_message: 'A custom message for the commit'
+        commit_message: 'PUSH FROM DEV REPO'
 
