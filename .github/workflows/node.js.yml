@@ -30,6 +30,8 @@ jobs:
     - run: CI=false npm run build --if-present
     - run: pwd
     - run: ls
+    - run: git config --global user.email hassanmahmoud607@gmai.com
+    - run: git config --global user.name hassan510-cmd
     - run: git add build 
     - run: git commit -m "add new build"
     - run: git push 
