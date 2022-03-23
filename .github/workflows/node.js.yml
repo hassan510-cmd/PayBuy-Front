@@ -55,6 +55,7 @@ jobs:
       with:
         source_file: 'build'
         destination_repo: 'hassan510-cmd/build_static'
+        destination_branch : 'master'
         user_email: 'hassanmahmoud607@gmail.com'
         user_name: 'hassan510-cmd'
         commit_message: 'A custom message for the commit'
