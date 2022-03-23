@@ -35,18 +35,28 @@ jobs:
     #- run: git add build 
     #- run: git commit -m "add new build"
     #- run: git push 
-    - run: git clone https://github.com/hassan510-cmd/build_static.git
-    - run: cp -r ../build/ ./
-      working-directory: ./build_static
+    #- run: git clone https://github.com/hassan510-cmd/build_static.git
+    #- run: cp -r ../build/ ./
+      #working-directory: ./build_static
     - run: ls
       working-directory: ./build_static
-    - run: git config --global user.email hassanmahmoud607@gmai.com
-      working-directory: ./build_static
-    - run: git config --global user.name hassan510-cmd
-      working-directory: ./build_static
-    - run: git add *
-      working-directory: ./build_static
-    - run: git commit -m "add from dev repo"
-      working-directory: ./build_static
-    - run: git push
-      working-directory: ./build_static
+    #- run: git config --global user.email hassanmahmoud607@gmai.com
+      #working-directory: ./build_static
+    #- run: git config --global user.name hassan510-cmd
+      #working-directory: ./build_static
+    #- run: git add *
+      #working-directory: ./build_static
+    #- run: git commit -m "add from dev repo"
+      #working-directory: ./build_static
+    #- run: git push
+     # working-directory: ./build_static
+    - name: Pushes to another repository
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      with:
+        source-directory: build/
+        destination-github-username: 'hassan510-cmd'
+        destination-repository-name: 'build_static'
+        user-email: hassanmahmoud607@gmail.com
+        commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+        target-branch: master
+
