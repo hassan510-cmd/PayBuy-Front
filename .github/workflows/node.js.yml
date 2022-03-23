@@ -38,8 +38,8 @@ jobs:
     #- run: git clone https://github.com/hassan510-cmd/build_static.git
     #- run: cp -r ../build/ ./
       #working-directory: ./build_static
-    - run: ls
-      working-directory: ./build_static
+    #- run: ls
+      #working-directory: ./build_static
     #- run: git config --global user.email hassanmahmoud607@gmai.com
       #working-directory: ./build_static
     #- run: git config --global user.name hassan510-cmd
