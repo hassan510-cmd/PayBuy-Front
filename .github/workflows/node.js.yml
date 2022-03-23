@@ -30,3 +30,4 @@ jobs:
     - run: CI=false npm run build --if-present
     - run: pwd
     - run: ls
+    - run: mkdir build
