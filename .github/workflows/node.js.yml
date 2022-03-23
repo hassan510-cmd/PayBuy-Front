@@ -53,7 +53,7 @@ jobs:
     - name: Pushes to another repository
       uses: dmnemec/copy_file_to_another_repo_action@main
       with:
-        source-directory: build/
+        source_file: "build"
         destination-github-username: 'hassan510-cmd'
         destination-repository-name: 'build_static'
         user-email: hassanmahmoud607@gmail.com
