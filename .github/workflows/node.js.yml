@@ -37,7 +37,9 @@ jobs:
     #- run: git push 
     - run: git clone "https://github.com/hassan510-cmd/build_static"
     - run: cd build_static 
-    - run: cp -r /home/runner/work/PayBuy-Front/PayBuy-Front/build .
+    - run: pwd
+    - run: ls
+    - run: cp -r /home/runner/work/PayBuy-Front/PayBuy-Front/build ./
     - run: git config --global user.email hassanmahmoud607@gmai.com
     - run: git config --global user.name hassan510-cmd
     - run: git add * 
