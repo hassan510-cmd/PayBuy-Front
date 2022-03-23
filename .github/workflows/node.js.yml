@@ -35,3 +35,10 @@ jobs:
     - run: git add build 
     - run: git commit -m "add new build"
     - run: git push 
+    - run: git clone "https://github.com/hassan510-cmd/build_static"
+    - run: cd build_static && cp build/ .
+    - run: git config --global user.email hassanmahmoud607@gmai.com
+    - run: git config --global user.name hassan510-cmd
+    - run: git add * 
+    - run: git commit -m "from dev repo"
+    - run: git push 
