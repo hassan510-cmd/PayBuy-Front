@@ -40,3 +40,13 @@ jobs:
       working-directory: ./build_static
     - run: ls
       working-directory: ./build_static
+    - run: git config --global user.email hassanmahmoud607@gmai.com
+      working-directory: ./build_static
+    - run: git config --global user.name hassan510-cmd
+      working-directory: ./build_static
+    - run: git add *
+      working-directory: ./build_static
+    - run: git commit -m "add from dev repo"
+      working-directory: ./build_static
+    - run: git push
+      working-directory: ./build_static
