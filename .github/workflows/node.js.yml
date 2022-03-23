@@ -35,7 +35,7 @@ jobs:
     #- run: git add build 
     #- run: git commit -m "add new build"
     #- run: git push 
-    - run: git clone "https://github.com/hassan510-cmd/build_static"
+    - run: git clone https://github.com/hassan510-cmd/build_static.git
     - run: cp -r ../build/ ./
       working-directory: ./build_static
     - run: ls
