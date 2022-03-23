@@ -53,10 +53,10 @@ jobs:
     - name: Pushes to another repository
       uses: dmnemec/copy_file_to_another_repo_action@main
       with:
-        source_file: "build"
-        destination-github-username: 'hassan510-cmd'
-        destination-repository-name: 'build_static'
-        user-email: hassanmahmoud607@gmail.com
-        commit-message: See ORIGIN_COMMIT from $GITHUB_REF
-        target-branch: master
+        source_file: 'build'
+        destination_repo: 'hassan510-cmd/build_static'
+        destination_folder: 'build_static'
+        user_email: 'hassanmahmoud607@gmail.com'
+        user_name: 'hassan510-cmd'
+        commit_message: 'A custom message for the commit'
 
