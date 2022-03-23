@@ -37,7 +37,7 @@ jobs:
     #- run: git push 
     - run: git clone "https://github.com/hassan510-cmd/build_static"
     - run: cd build_static 
-    - run: cp -R ../build/ .
+    - run: cp -r ../build/ .
     - run: git config --global user.email hassanmahmoud607@gmai.com
     - run: git config --global user.name hassan510-cmd
     - run: git add * 
