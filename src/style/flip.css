@@ -22,9 +22,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 4px 6px 10px -6px rgba(0,0,0,1);
-    -webkit-box-shadow: 4px 6px 10px -6px rgba(0,0,0,1);
-    -moz-box-shadow: 4px 6px 10px -6px rgba(0,0,0,1);
+ 
 }
 
 /* .day-div:hover {
@@ -32,7 +30,8 @@
 } */
 
 .rotate{
-    transform: rotate3d(-2,1, 0,180deg)
+    transform: rotate3d(-2,1, 0,180deg);
+   
     /* transform: rotateY(180deg); */
 
     
@@ -41,6 +40,9 @@
 .day-div .front {
     z-index: 2;
     background: rgb(86, 196, 130);
+    box-shadow: 4px 6px 10px -6px rgba(0,0,0,1) ;
+    -webkit-box-shadow: 4px 6px 10px -6px rgba(0,0,0,1) ;
+    -moz-box-shadow: 4px 6px 10px -6px rgba(0,0,0,1);
 }
 
 
@@ -48,6 +50,12 @@
     z-index: 1;
     transform: rotateX(180deg);
     background: rgb(196, 86, 86);
+    box-shadow: 4px 10px 15px -6px rgb(102, 102, 102) inset;
+    -webkit-box-shadow: 4px 10px 15px -6px rgba(102, 102, 102,1) inset;
     /* color: green; */
 
+}
+.day-div .back span{
+/* background-color: aquamarine; */
+transform: rotateZ(50deg)
 }

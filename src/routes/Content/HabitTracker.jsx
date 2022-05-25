@@ -27,11 +27,10 @@ export default function HabitTracker() {
                     onClick={() => toggleState(day, index)}
                 >
                     <div className='front' >
-                        {day.day}
+                        <span>{day.day}</span>
                     </div>
                     <div className='back'>
-
-                        {day.day}
+                        <span>{day.day}</span>
                     </div>
                 </div>
             ))}
