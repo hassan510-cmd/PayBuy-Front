@@ -31,6 +31,7 @@ export default function NavComponent() {
                             <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='/all-categories'>Categories</Nav.Link>
                             <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='income-sources'>Income Sources</Nav.Link>
                             <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='/all-categories'>My Account</Nav.Link>
+                            <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='/habits-tracker'>Habits Tracker</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
