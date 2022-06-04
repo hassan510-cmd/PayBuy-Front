@@ -15,8 +15,11 @@ export default function FloatButton(props) {
         display:"flex",
         alignItems:"center",
         justifyContent: "center",
-        zIndex:1000
-    }} className='btn btn-primary p-3 shadow'>
+        zIndex:1000,
+        backgroundColor:"#273036",
+        color:"white"
+        
+    }} className='btn p-3 shadow'>
         <span >{props.text}</span>
     </button>
   )

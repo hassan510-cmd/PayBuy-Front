@@ -180,37 +180,39 @@ export default function PurchaseOrders() {
 
         <SwipeableList  >
           {orders.map((obj, index) => (
-            <SwipeableListItem key={obj.PO_id}
-              swipeLeft={{
-                content: <div className="mb-2 list-group-item rounded-3 shadow-sm 
-                           flex-wrap d-flex justify-content-between align-items-center "
-                  style={{ backgroundColor: "blue", borderRadius: "10px", }}>
-                  <span style={{ color: "white" }} className="mx-2">edit</span>
-                  <PencilSquare color='white' onClick={() => { console.log(obj.PO_id) }} />
-                </div>,
-                action: () => console.info('swipe action triggered')
-              }}
-              swipeRight={{
-                content: <div className="mb-2 list-group-item rounded-3 shadow-sm 
-                           flex-wrap d-flex justify-content-between align-items-center "
-                  style={{ backgroundColor: "red", borderRadius: "10px" }}>
-                  <span style={{ color: "white" }} className="mx-2">delete</span>
-                  <Trash color='white' />
-                </div>,
-                action: () => deleteOrder(obj, index)
-              }}
-            // onSwipeProgress={progress => console.info(`Swipe progress: ${progress}%`)}
-            >
-              <div className="mb-2 list-group-item justify-content-between align-items-center d-flex rounded-3 shadow-sm 
-                             " style={{ textDecorationLine: obj.is_payed ? "line-through" : "none", marginTop: "0px", width: "100%" }}>
-                <input defaultChecked={obj.is_payed}
-                  onChange={(e) => toggleOrderState(e, obj, index)}
-                  className="form-check-input me-1"
-                  type="checkbox" value="" />
-                {obj.product_name}
-                <span className="badge bg-success rounded-pill">{obj.price}.LE</span>
-              </div>
-            </SwipeableListItem>
+            <div className='mb-2 shadow-sm'>
+              <SwipeableListItem key={obj.PO_id}
+                swipeLeft={{
+                  content: <div className=" list-group-item rounded-3 shadow-sm
+                             flex-wrap d-flex justify-content-between align-items-center "
+                    style={{ backgroundColor: "blue", borderRadius: "10px", }}>
+                    <span style={{ color: "white" }} className="mx-2">edit</span>
+                    <PencilSquare color='white' onClick={() => { console.log(obj.PO_id) }} />
+                  </div>,
+                  action: () => console.info('swipe action triggered')
+                }}
+                swipeRight={{
+                  content: <div className=" list-group-item rounded-3 shadow-sm
+                             flex-wrap d-flex justify-content-between align-items-center "
+                    style={{ backgroundColor: "red", borderRadius: "10px" }}>
+                    <span style={{ color: "white" }} className="mx-2">delete</span>
+                    <Trash color='white' />
+                  </div>,
+                  action: () => deleteOrder(obj, index)
+                }}
+              // onSwipeProgress={progress => console.info(`Swipe progress: ${progress}%`)}
+              >
+                <div className=" list-group-item justify-content-between align-items-center d-flex rounded-3 shadow-sm
+                               " style={{ textDecorationLine: obj.is_payed ? "line-through" : "none", marginTop: "0px", width: "100%" }}>
+                  <input defaultChecked={obj.is_payed}
+                    onChange={(e) => toggleOrderState(e, obj, index)}
+                    className="form-check-input me-1"
+                    type="checkbox" value="" />
+                  {obj.product_name}
+                  <span className="badge bg-success rounded-pill">{obj.price}.LE</span>
+                </div>
+              </SwipeableListItem>
+            </div>
           ))}
         </SwipeableList>
       </div>

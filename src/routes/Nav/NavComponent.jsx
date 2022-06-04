@@ -15,22 +15,12 @@ export default function NavComponent() {
                 <Container fluid>
                     <Navbar.Brand href="#">Pay Buy</Navbar.Brand>
                     <Navbar.Toggle onClick={() => setExpand(expand ? false : "expand")} aria-controls="offcanvasNavbar" style={{ border: "none" }} />
-                    {/* <Navbar.Offcanvas
-                        id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel"
-                        placement="top"
-                    > */}
-                    {/* <Background/> */}
-                    {/* <Offcanvas.Header onClick={()=>setExpand(false)} closeButton>
-                            <Offcanvas.Title id="offcanvasNavbarLabel">Pay Buy</Offcanvas.Title>
-                        </Offcanvas.Header> */}
-                    {/* <Offcanvas.Body> */}
                     <Navbar.Collapse id="offcanvasNavbar">
                         <Nav className="justify-content-end flex-grow-1 pe-3">
                             <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='/time-sheet'>Home</Nav.Link>
                             <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='/all-categories'>Categories</Nav.Link>
                             <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='income-sources'>Income Sources</Nav.Link>
-                            <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='/all-categories'>My Account</Nav.Link>
+                            <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='account'>My Account</Nav.Link>
                             <Nav.Link as={NavLink} onClick={() => setExpand(false)} to='/habits-tracker'>Habits Tracker</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

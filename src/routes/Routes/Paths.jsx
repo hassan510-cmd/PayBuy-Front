@@ -12,6 +12,8 @@ import TimeSheetDetails from "../Content/TimeSheetDetails";
 import PurchaseOrders from "../Content/PurchaseOrders";
 import IncomeSources from "../Content/IncomeSources";
 import HabitTracker from "../Content/HabitTracker";
+import HabitTrackerDetails from '../Content/HabitTrackerDetails';
+import Account from '../Content/Account';
 export default function Paths() {
     return (
         <BrowserRouter>
@@ -26,6 +28,8 @@ export default function Paths() {
                 <Route path="purchase-orders" element={<PurchaseOrders />} />
                 <Route path="income-sources" element={<IncomeSources />} />
                 <Route path="habits-tracker" element={<HabitTracker />} />
+                <Route path="/habits-tracker-details" element={<HabitTrackerDetails />} />
+                <Route path="account" element={<Account />} />
             </Routes>
         </BrowserRouter>
     )
